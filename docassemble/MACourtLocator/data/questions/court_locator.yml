@@ -1,4 +1,7 @@
 ---
+include:
+  - docassemble.LITLabTheme:main.yml
+---
 metadata:
   title: |
     Massachusetts Court Locator
@@ -10,7 +13,7 @@ modules:
 #  css: locator.css
 ---
 objects:
-  - macourts: MACourtList.using(courts=['housing_courts','bmc','district_courts','superior_courts','land_court', 'juvenile_courts', 'probate_and_family_courts'])
+  - macourts: MACourtList.using(courts=['housing_courts','bmc','district_courts','superior_courts','land_court', 'juvenile_courts', 'probate_and_family_courts', 'appeals_court', 'supreme_judicial_court'])
   - address: Address
   - city_only_address: City
   - addresses: DAList.using(object_type=Address, there_are_any=True)
@@ -223,6 +226,11 @@ help:
     * Probate and Family Court
     * Juvenile Court
     * Land Court
+
+    And two appellate courts:
+
+    * Appeals Court
+    * Supreme Judicial Court
     
     The District Court, BMC, and Superior Court are all courts that can hear
     any type of case. The Land Court, Probate and Family, Juvenile Court, and
