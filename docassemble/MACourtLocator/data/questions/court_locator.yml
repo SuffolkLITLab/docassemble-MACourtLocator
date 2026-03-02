@@ -5,6 +5,7 @@ include:
 metadata:
   title: |
     Massachusetts Court Locator
+  jurisdiction: NAM-US-US+MA
 ---
 modules:
   - docassemble.MACourts.macourts
