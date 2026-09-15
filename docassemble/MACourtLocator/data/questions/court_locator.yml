@@ -51,6 +51,7 @@ code: |
     city_only_address.city = city_only
     city_only_address.state = "MA"    
 ---
+id: "city only address"
 question: |
   ${city_only_address}
 continue button field: city_only_debug
@@ -58,10 +59,12 @@ continue button field: city_only_debug
 code: |
   all_name_matches = [court for court in macourts if court_name.lower() in court.name.lower()]
 ---
+id: "all name matches"
 question: |
   ${all_name_matches}
 continue button field: debug_all_matches
 ---
+id: "massachusetts court locator tool"
 question: |
   Massachusetts Court Locator Tool
 subquestion: |
@@ -124,6 +127,7 @@ data:
   - Juvenile Court
   - Land Court  
 ---
+id: "we didnt find a matching court"
 question: |
   We didn't find a matching court
 subquestion: |
@@ -148,7 +152,7 @@ fields:
   - Zip: address.zip
     required: False
 ---
-id: enter an address
+id: "enter an address 2"
 question: |
   Enter the addresses you want to match
 subquestion: |
